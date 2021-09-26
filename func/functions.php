@@ -1,8 +1,8 @@
 <?php
-        $srv = "sql210.epizy.com";
-        $user = "epiz_28842786";
-        $pwd = "l8MlUmqbdHJj";
-        $db = "epiz_28842786_katalog";
+        $srv = "sql110.epizy.com";
+        $user = "epiz_27173059";
+        $pwd = "q5bScQCdhcU";
+        $db = "epiz_27173059_pantauan";
 
     $koneksi = mysqli_connect($srv,$usr,$pass,$db);
 
