@@ -31,7 +31,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <title>Daftar Akun</title>
+    <title>Tambah Tugas</title>
   
   
    </head>

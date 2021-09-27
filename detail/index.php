@@ -56,7 +56,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <title>Daftar Akun</title>
+    <title>Detail Tugas</title>
   
   
    </head>
