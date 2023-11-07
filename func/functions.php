@@ -1,13 +1,13 @@
 <?php
-        $srv = "sql112.epizy.com";
-        $usr = "epiz_29836050";
-        $pass = "vLeDIWbJKY";
-        $db = "epiz_29836050_pantauan";
+        // $srv = "sql112.epizy.com";
+        // $usr = "epiz_29836050";
+        // $pass = "vLeDIWbJKY";
+        // $db = "epiz_29836050_pantauan";
 
-        // $srv = "Localhost";
-        // $usr = "root";
-        // $pass = "";
-        // $db = "test";
+        $srv = "Localhost";
+        $usr = "root";
+        $pass = "";
+        $db = "pantau_tugas";
 
     $koneksi = mysqli_connect($srv,$usr,$pass,$db);
 
@@ -95,7 +95,7 @@
             echo "<td>" .$value['nama']. "</td>";
             echo "<td class='text-center'>" .$tanggal. "</td>";
             echo "<td class='text-center'>" .$value['jam']. "</td>";
-            echo "<td class='text-center'> <a href='detail/index.php?id=".$id ."'> ... </a> </td>";
+            echo "<td class='text-center'> <a href='detail/index.php?id=".$id ."'> <button class='btn btn-primary'>Detail</a> </td>";
             echo "<td> <input type='checkbox'".($value['checked'] >= 1  ? 'checked' : 'none'). " onclick='return false;' >";
             echo "<tr>";
         };
@@ -121,16 +121,18 @@
         };
     };
 
-    function addTugas($username,$nama,$tanggal,$jam){
+    function addTugas($username, $nama, $tanggal, $jam) {
         global $koneksi;
-
-        $sql = "INSERT INTO {$username} VALUES ('','$nama','$tanggal','$jam','0')";
-        echo $sql;
-        $masuk = mysqli_query($koneksi,$sql);
-        echo $masuk;
+    
+        $sql = "INSERT INTO {$username} VALUES ('', '$nama', '$tanggal', '$jam', '0')";
+        $masuk = mysqli_query($koneksi, $sql);
+    
         if ($masuk) {
-            header("Location: ../index.php");
-        };
+            echo "<script> 
+                    alert('Berhasil menambah data'); 
+                    window.location.href = '../index.php'; // Ganti 'halaman_tujuan.php' dengan URL tujuan Anda
+                 </script>";
+        }
     }
 
     function update($username,$id,$nama,$tanggal,$jam,$check){
@@ -138,7 +140,10 @@
         $sql = "UPDATE {$username} SET nama='$nama', tanggal='$tanggal', jam='$jam', checked='$check' WHERE id='$id'";
         mysqli_query($koneksi, $sql);
         if(mysqli_query($koneksi, $sql)){
-            header('Location: ../index.php');
+            echo "<script> 
+            alert('Berhasil mengubah data'); 
+            window.location.href = '../index.php'; // Ganti 'halaman_tujuan.php' dengan URL tujuan Anda
+            </script>";
         };
 
     };

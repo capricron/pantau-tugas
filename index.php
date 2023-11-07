@@ -71,7 +71,7 @@
                     <th>Tugas</th>
                     <th class='text-center'>Deadline Tanggal</th>
                     <th class='text-center'>Deadline Jam</th>
-                    <th class='text-center'>Detail</th>
+                    <th class='text-center'>Action</th>
                     <th></th>
                 </tr>
 
