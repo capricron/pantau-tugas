@@ -16,6 +16,12 @@
 
         addAcc($username,$password);
         makeTable($username);
+
+        // make session
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+
+        header('Location: ../index.php');
     };
 
 

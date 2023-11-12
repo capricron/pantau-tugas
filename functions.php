@@ -148,7 +148,10 @@
         $sql = "DELETE FROM {$username} WHERE id='$id'";
         $cek = mysqli_query($koneksi, $sql);
         if(mysqli_query($koneksi, $sql)){
-            header('Location: ../index.php');
+            echo "<script> 
+            alert('Berhasil menghapus data'); 
+            window.location.href = '../index.php'; // Ganti 'halaman_tujuan.php' dengan URL tujuan Anda
+            </script>";
         };
     }
     

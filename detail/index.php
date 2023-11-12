@@ -93,7 +93,6 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                 </div>
                 <div class="modal-body text-dark">
                   Apakah anda yakin ingin menghapus data tugas?
